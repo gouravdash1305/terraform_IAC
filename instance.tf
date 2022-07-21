@@ -19,7 +19,7 @@ resource "aws_security_group" "allow_tls" {
   # Dynamic block
 
   dynamic "ingress" {
-    for_each = [22, 8000, 9997]
+    for_each = [22, 8000, 9997, 8089]
     iterator = port
     content {
       description = "SSH to VPC"
